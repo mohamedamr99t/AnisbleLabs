@@ -1,0 +1,6 @@
+template_name : "html_template"
+myMessage : "Lab 4 - TEMPLATES & HANDLERS"
+package_name: "apache2"
+file_list:
+  - style.css
+  - script.js

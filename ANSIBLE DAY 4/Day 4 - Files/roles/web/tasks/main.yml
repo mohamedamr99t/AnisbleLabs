@@ -1,0 +1,6 @@
+- name: Install Latest Apache
+  package:
+    name: "{{ package_name }}"
+    state: latest
+  notify: "{{template_name}}"
+  changed_when: true

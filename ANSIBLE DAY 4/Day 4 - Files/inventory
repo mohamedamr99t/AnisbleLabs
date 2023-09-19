@@ -1,0 +1,9 @@
+
+[web_servers]
+52.56.166.196 
+[database_servers]
+3.87.24.252
+3.87.24.253
+[fullstack:children]
+web_servers
+database_servers

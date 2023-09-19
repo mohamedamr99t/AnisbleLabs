@@ -1,0 +1,17 @@
+- name: "{{ template_name }}"
+  template:
+    src: index.html.j2
+    dest: "/var/www/html/index.html"
+  notify: CopyingFiles
+
+- name: CopyingFiles
+  copy:
+    src: "{{ item }}"
+    dest: "/var/www/html/{{ item }}"
+  loop: "{{ file_list }}"
+  notify: Restart Apache
+
+- name: Restart Apache
+  service:
+    name: "{{ package_name }}"
+    state: restarted
